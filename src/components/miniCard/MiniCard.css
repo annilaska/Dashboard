@@ -2,6 +2,7 @@
     display: flex;
     flex: 1;
     height: 7rem!important;
+    width: 35%;
     border-radius: 0.7rem;
     position: relative;
     color: white;
@@ -12,3 +13,7 @@
     margin-top: 20px;
 }
 
+.chart {
+    width: 100%;
+    height: auto;
+}

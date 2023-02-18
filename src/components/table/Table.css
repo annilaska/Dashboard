@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .downloadBtn {
@@ -23,5 +24,53 @@
     background-color: #8C64D8;
     border: none;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
+.download {
+    align-self: flex-end;
+}
+
+.search {
+    width: 735px;
+    height: 45px;  
+    border-radius: 5px; 
+    font-size: 16px;
+    padding-left: 10px;
+    background: var(--activeItem);
+    border: none;
+}
+
+.search:hover, .search:active, .search:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.searchIcon {
+    margin-left: -45px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+ 
+ }
+
+.searcBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.searchValue {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.searchValuesBlok {
+    display: grid;
+    grid-template-columns: 14rem 14rem 14rem;
+    gap: 10px;
+    font-size: 11px;
+}

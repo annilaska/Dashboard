@@ -12,14 +12,16 @@ const MiniCard = ({ xl }) => {
         : null
         return n
     })
-    const v = Object.values(x).filter((el, index) => index === 5)
-    console.log(v)
-    ;
+    const v = Object.values(x).map((el, index) => el[" Численность молодeжи, задействованной в программных мероприятиях по направлению "
+])
+    
+    
     const data = {
         options: {
             chart: {
                 type: "area",
                 height: "auto",
+        
             },
             dropShadow: {
                 enabled: false,
@@ -50,30 +52,29 @@ const MiniCard = ({ xl }) => {
                 show: true,
             },
             xaxis: {
-                type: 'datetime',
+                // type: 'datetime',
                 categories: [
-                    "2018-09-19T00:00:00.00Z",
-                    "2018-09-19T01:30:00.00Z",
-                    "2018-09-19T02:30:00.00Z",
-                    "2018-09-19T03:30:00.00Z",
-                    "2018-09-19T04:30:00.00Z",
-                    "2018-09-19T05:30:00.00Z",
-                    "2018-09-19T06:30:00.00Z",
+                    "биом-на",
+                    "пром.тех-гии",
+                    "аэрокосмос",
+                    "сель.хоз.",
+                    "IT",
+                    "другие",
                 ]
             },
         },
         series: [
             {
                 name: 'Revenue',
-                data: [10, 100, 50, 70, 80, 30, 40]
+                data: v
             }
         ]
     }
-
+   
 
   return (
     <div className="compactCard">
-        <Chart type='area' series={data.series} options={data.options} />
+        <Chart className="chart" type='area' series={data.series} options={data.options} />
     </div>
   )
 }
