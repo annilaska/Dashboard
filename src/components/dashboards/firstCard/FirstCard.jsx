@@ -2,13 +2,13 @@ import { DashboardCircle } from "../firstCard/dashboardCircle/DashboardCircle"
 import { DashboardColumn } from "../firstCard/dashboardColumn/DashboardColumn"
 import MiniCard from "../firstCard/miniCard/MiniCard"
 
-const FirstCard = ({xl,indicators}) => {
+const FirstCard = ({indicators}) => {
 
     return (
         <>
             <MiniCard xl={indicators}/>
+            <DashboardColumn xl={indicators} />
             <DashboardCircle xl={indicators}/>
-            <DashboardColumn xl={indicators}/>
         </>
     )
 

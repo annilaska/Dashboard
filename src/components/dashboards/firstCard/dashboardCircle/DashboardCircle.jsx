@@ -1,22 +1,29 @@
 import '../../dashboards.scss'
 import { PieChart, Pie, Tooltip } from "recharts";
+import { useEffect, useMemo, useState } from 'react';
+
+
+
+const DashboardCircle = ({ xl }) => {
 
 const data01 = [ {}, {}, {}, {}, {}, {}]
 const data02 = [ {}, {}, {}, {}, {}, {}]
-
-const DashboardCircle = ({ xl }) => {
   
   const firstRegion = xl
     .filter((el, index) => index >= 1 && index <= 6)
+    .filter(el => el !== undefined)
 
-  const a = firstRegion.map(el => el[" Кол-во грантов "])
-  const b = firstRegion.map(el => el[" Бюджет грантов, руб "])
+  const a = firstRegion
+    .map(el => el[" Кол-во грантов "])
+    .filter(el => el !== undefined)
+  const b = firstRegion
+    .map(el => el[" Бюджет грантов, руб "])
+    .filter(el => el !== undefined)
 
    data01.forEach((el, index) => {
     el.name = 'Кол-во грантов' + firstRegion[index]["Направления реализации государственной молодeжной политики"]
     el.value = a[index]
   })
-
    data02.map((el, index) => {
     el.name = 'Бюджет грантов, руб ' + firstRegion[index]["Направления реализации государственной молодeжной политики"]
     el.value = b[index]
@@ -24,8 +31,8 @@ const DashboardCircle = ({ xl }) => {
 
   return (
     <div className="dashBordContainer">
-      <PieChart width={300} height={400}>
-        <Pie
+        <PieChart width={300} height={400}>
+          <Pie
           data={data01}
           dataKey="value"
           cx={200}
