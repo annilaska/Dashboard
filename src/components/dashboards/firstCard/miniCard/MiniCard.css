@@ -1,8 +1,7 @@
 .compactCard {
     display: flex;
     flex: 1;
-    height: 7rem!important;
-    width: 35%;
+    /* height: 7rem!important; */
     border-radius: 0.7rem;
     position: relative;
     color: white;
@@ -11,9 +10,7 @@
     background: linear-gradient(180deg, #bb67ff 0%, #c484f3 100%);
     box-shadow: 0px 10px 20px 0px #e0c6f5;
     margin-top: 20px;
+    width: 350px;
+    height: 250px;
 }
 
-.chart {
-    width: 100%;
-    height: auto;
-}

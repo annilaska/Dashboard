@@ -2,8 +2,8 @@ import React, { useRef, useState} from 'react';
 
 import * as XLSX from 'xlsx'
 import './Table.css'
-//import MiniCard from '../miniCard/MiniCard';
-import {UilSearch} from '@iconscout/react-unicons'
+import { UilSearch } from '@iconscout/react-unicons'
+import { FirstCard } from '../dashboards/firstCard/FirstCard';
 
 
 export default function MyTable() {
@@ -62,10 +62,10 @@ export default function MyTable() {
     const handleIndicators = (el) => {
         let content = el.target.getAttribute('value').toLowerCase()
         const selectRegion = xl !== null ? xl[0].filter(item => item['Регион'].toLowerCase() === content) : null
-        console.log(selectRegion)
         setIndicators(selectRegion)
     }
    
+
 
     return (
         <div className="Table">
@@ -85,11 +85,14 @@ export default function MyTable() {
                 }
             </div>
             
-            {/* {
-                xl !== null 
-                ? <MiniCard xl={xl[0]} />
+             {
+                indicators !== null 
+                      ?
+                        <div className="tableContainer">
+                        <FirstCard xl={xl[0]} indicators={indicators} />
+                        </div>
                 : null
-            } */}
+            } 
         </div>
   )
 }
