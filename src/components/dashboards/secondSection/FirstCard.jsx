@@ -1,10 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './secondSection.scss'
 import ApexChart from 'react-apexcharts'
 import { motion, AnimateSharedLayout } from 'framer-motion'
+import { UilTimes } from '@iconscout/react-unicons'
 
-const FirstCard = () => {
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
+const FirstCard = ({ indicators }) => {
+  
+    const value = indicators.find(el => el['№ строки'] === 12)
+
+    const [expanded, setExpanded] = useState(false)
+
+    return (
+      <AnimateSharedLayout>
+          {
+              expanded
+              ? <ExpandedCard setExpanded={() => setExpanded(false)} />
+              : <CompactCard value={value} setExpanded={() => setExpanded(true)} />
+          }
+      </AnimateSharedLayout>
+    )
+
+}
+
+// CompactCard
+
+function CompactCard ({ value, setExpanded }) {
+    const str = " Количество детских и молодeжных общественных объединений, работающих по данному "
+    const CircularValue = Object.values(value).map(el => el)
+    
+    console.log( CircularValue);
+    return (
+        <motion.div className="compactCard"
+        onClick={setExpanded}
+        layoutId='expandableCard'
+        >
+            <div className="radialBar">
+                <CircularProgressbar 
+                value={30}
+                text='30%'
+                />
+                <span>по региону</span>
+                <span>всего</span>
+            </div>
+            <div className="detail">
+                <div className='budget'>
+                    <span>Бюджет СРФ</span>
+                    <span>Бюджет МО</span>
+                </div>
+                <div className="budget">
+                    <span>Кол-во грантов</span>
+                    <span>Бюджет грантов</span>
+                </div>
+            </div>
+        </motion.div>
+    )
+}
+
+// ExpandedCard
+
+function ExpandedCard ({ setExpanded }) {
     const data = {
         options: {
             chart: {
@@ -59,7 +116,7 @@ const FirstCard = () => {
         },
         series: [
             {
-                name: 'Series1',
+                name: 'по годам',
                 data: [31, 40, 28, 51, 42, 109, 128, 110, 130, 85, 122, 65]
             },
             {
@@ -70,14 +127,19 @@ const FirstCard = () => {
     }
 
     return (
-        <>
-            <motion.div className="compactCard" >
-                <ApexChart type='area' series={data.series} options={data.options} width={350} height={250}/>
-            </motion.div>
-            <motion.div className="compactCard">
-                <ApexChart type='area' series={data.series} options={data.options} width={350} height={250}/>
-            </motion.div>
-        </>
+        <motion.div className="ExpandedCard"
+        layoutId='expandableCard'
+        >
+            <div style={{alignSelf: 'flex-end', cursor: 'pointer', color: 'white'}}>
+                <UilTimes onClick={setExpanded} />
+            </div>
+            <span>title</span>
+            <div className="chartContainer">
+                <ApexChart type='area' series={data.series} options={data.options} />
+            </div>
+            <span>Last 24 hours</span>
+        </motion.div>
+        
     )
 }
 
