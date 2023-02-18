@@ -1,9 +1,9 @@
 import React  from 'react';
-import './Table.css'
+import './Table1.css'
 import { FirstCard } from '../dashboards/firstCard/FirstCard';
 
 
-export default function MyTable({filteredCard, xl, handleIndicators, indicators, uniqueNumbers}) {
+export default function MyTable1({filteredCard, xl, handleIndicators, indicators, uniqueNumbers}) {
 
 
     return (
@@ -16,13 +16,12 @@ export default function MyTable({filteredCard, xl, handleIndicators, indicators,
                     : null
                 }
             </div>
-            
+            MyTable1
              {
                 indicators !== null 
-                      ?
-                        <div className="tableContainer">
-                            <FirstCard indicators={indicators} />
-                        </div>
+                ? <div className="tableContainer">
+                    <FirstCard xl={xl[0]} indicators={indicators} />
+                </div>
                 : null
             } 
         </div>

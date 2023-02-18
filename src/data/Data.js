@@ -7,15 +7,15 @@ import {
 export const SidebarData = [
     {
         icon: UilEstate,
-        heading: 'Дашборд'
+        heading: 'Раздел 1'
     },
     {
         icon: UilClipboardAlt,
-        heading: 'Таблицы'
+        heading: 'Раздел 2'
     },
     {
         icon: UilChart,
-        heading: 'Графики'
+        heading: 'Раздел 3'
     },
 
 ]

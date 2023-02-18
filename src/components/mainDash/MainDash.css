@@ -1,8 +1,66 @@
 .MainDash {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     box-sizing: border-box;
     padding: 2rem;
 }
 
+.downloadInput {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.downloadBtn {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: #8C64D8;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.download {
+    align-self: flex-end;
+}
+
+.search {
+    width: 735px;
+    height: 45px;  
+    border-radius: 5px; 
+    font-size: 16px;
+    padding-left: 10px;
+    background: var(--activeItem);
+    border: none;
+}
+
+.search:hover, .search:active, .search:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.searchIcon {
+    margin-left: -45px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+ 
+ }
+
+
+ .searcBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
