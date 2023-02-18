@@ -2,8 +2,9 @@ import React, { useRef, useState} from 'react';
 
 import * as XLSX from 'xlsx'
 import './Table.css'
-import MiniCard from '../miniCard/MiniCard';
-
+import MiniCard from '../dashboards/miniCard/MiniCard';
+import { DashboardColumn } from '../dashboards/dashboardColumn/DashboardColumn'
+import { DashboardCircle } from '../dashboards/dashboardCircle/DashboardCircle'
 
 export default function MyTable() {
 
@@ -50,7 +51,7 @@ export default function MyTable() {
         })
     
     }
-    console.log(xl)
+    //console.log(xl)
 
 
   return (
@@ -61,8 +62,13 @@ export default function MyTable() {
         </label>
         {
             xl !== null 
-            ? <MiniCard xl={xl[0]} />
-            : null
+                  ?
+                <div className="tableContainer">
+                    <MiniCard xl={xl[0]} />
+                    <DashboardCircle xl={xl[0]} />
+                    <DashboardColumn xl={xl[0]} />
+                </div>
+                : null
         }
     </div>
   )
