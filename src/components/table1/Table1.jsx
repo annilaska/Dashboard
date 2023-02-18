@@ -16,11 +16,10 @@ export default function MyTable1({filteredCard, xl, handleIndicators, indicators
                     : null
                 }
             </div>
-            Раздел 2
              {
                 indicators !== null 
                 ? <div className="tableContainer">
-                    <FirstCard xl={xl[0]} indicators={indicators} />
+                    <FirstCard indicators={indicators} />
                 </div>
                 : null
             } 

@@ -9,7 +9,6 @@ const FirstCard = ({indicators}) => {
             <MiniCard xl={indicators} />
             <DashboardCircle xl={indicators}/>
             <DashboardColumn xl={indicators} />
-            
         </>
     )
 

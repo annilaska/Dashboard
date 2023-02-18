@@ -71,11 +71,11 @@ const FirstCard = () => {
 
     return (
         <>
-            <motion.div className="compactCard">
-                <ApexChart type='area' series={data.series} options={data.options} />
+            <motion.div className="compactCard" >
+                <ApexChart type='area' series={data.series} options={data.options} width={350} height={250}/>
             </motion.div>
             <motion.div className="compactCard">
-                <ApexChart type='area' series={data.series} options={data.options} />
+                <ApexChart type='area' series={data.series} options={data.options} width={350} height={250}/>
             </motion.div>
         </>
     )

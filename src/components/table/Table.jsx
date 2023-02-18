@@ -16,7 +16,6 @@ export default function MyTable({filteredCard, xl, handleIndicators, indicators,
                     : null
                 }
             </div>
-            Раздел 1
              {
                 indicators !== null 
                       ?
