@@ -1,6 +1,5 @@
 .compactCard {
     display: flex;
-    flex: 1;
     //height: 12rem!important; 
     border-radius: 0.7rem;
     position: relative;
@@ -13,5 +12,11 @@
     width: 350px;
     height: 250px;
     margin-left: 5px;
+}
+
+.containerApex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
