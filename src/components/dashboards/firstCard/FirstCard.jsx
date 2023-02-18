@@ -6,9 +6,10 @@ const FirstCard = ({indicators}) => {
 
     return (
         <>
-            <MiniCard xl={indicators}/>
-            <DashboardColumn xl={indicators} />
+            <MiniCard xl={indicators} />
             <DashboardCircle xl={indicators}/>
+            <DashboardColumn xl={indicators} />
+            
         </>
     )
 
