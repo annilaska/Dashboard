@@ -1,4 +1,4 @@
-import '../dashboards.scss'
+import '../../dashboards.scss'
 import { PieChart, Pie, Tooltip } from "recharts";
 
 const data01 = [ {}, {}, {}, {}, {}, {}]

@@ -7,7 +7,7 @@ import {
     CartesianGrid,
     Legend,
 } from "recharts";
-import '../dashboards.scss'
+import '../../dashboards.scss'
   
 const data = [ {}, {}, {}, {}, {}, {}]
   
