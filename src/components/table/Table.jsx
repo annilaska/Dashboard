@@ -12,11 +12,11 @@ export default function MyTable({filteredCard, xl, handleIndicators, indicators,
             <div className='searchValuesBlok'>
                 {
                     uniqueNumbers.length
-                    ? filteredCard.map(el => <div value={el} onClick={(el) => handleIndicators(el)} className='searchValue'>{el}</div>)
+                    ? filteredCard.map(el => <div key={el} value={el} onClick={(el) => handleIndicators(el)} className='searchValue'>{el}</div>)
                     : null
                 }
             </div>
-            
+            Раздел 1
              {
                 indicators !== null 
                       ?
