@@ -62,10 +62,10 @@ export default function MyTable() {
     const handleIndicators = (el) => {
         let content = el.target.getAttribute('value').toLowerCase()
         const selectRegion = xl !== null ? xl[0].filter(item => item['Регион'].toLowerCase() === content) : null
-        console.log(selectRegion)
         setIndicators(selectRegion)
     }
    
+
 
     return (
         <div className="Table">
@@ -86,10 +86,10 @@ export default function MyTable() {
             </div>
             
              {
-                xl !== null 
+                indicators !== null 
                       ?
                         <div className="tableContainer">
-                            <FirstCard xl = {xl[0]} />
+                        <FirstCard xl={xl[0]} indicators={indicators} />
                         </div>
                 : null
             } 

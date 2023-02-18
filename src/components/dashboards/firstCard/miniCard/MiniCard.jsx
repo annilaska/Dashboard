@@ -6,7 +6,6 @@ import Chart from 'react-apexcharts'
 const MiniCard = ({ xl }) => {
 
     const firstRegion = xl
-        .filter(el => el.Регион === 'Алтайский край')
         .filter((el, index) => index >= 1 && index <= 6)
 
     const v = firstRegion.map(el => el[" Численность молодeжи, задействованной в программных мероприятиях по направлению "])

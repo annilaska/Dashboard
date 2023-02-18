@@ -7,8 +7,7 @@ const data02 = [ {}, {}, {}, {}, {}, {}]
 const DashboardCircle = ({ xl }) => {
   
   const firstRegion = xl
-  .filter(el => el.Регион === 'Алтайский край')
-  .filter((el, index) => index >= 1 && index <= 6)
+    .filter((el, index) => index >= 1 && index <= 6)
 
   const a = firstRegion.map(el => el[" Кол-во грантов "])
   const b = firstRegion.map(el => el[" Бюджет грантов, руб "])

@@ -14,7 +14,6 @@ const data = [ {}, {}, {}, {}, {}, {}]
 const DashboardColumn = ({ xl }) => {
     
   const firstRegion = xl
-    .filter(el => el.Регион === 'Алтайский край')
     .filter((el, index) => index >= 1 && index <= 6)
   
   const a = firstRegion.map(el => el[" Бюджет СРФ, руб "])
