@@ -89,7 +89,7 @@ export default function MyTable() {
                 indicators !== null 
                       ?
                         <div className="tableContainer">
-                        <FirstCard xl={xl[0]} indicators={indicators} />
+                            <FirstCard indicators={indicators} />
                         </div>
                 : null
             } 
