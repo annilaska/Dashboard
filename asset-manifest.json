@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/annilaska/Dashboard.git/static/css/main.ea5d264c.css",
-    "main.js": "/annilaska/Dashboard.git/static/js/main.4c03f082.js",
-    "static/media/logoRos.svg": "/annilaska/Dashboard.git/static/media/logoRos.7328bd62f6455ad0c959e8faeffc1822.svg",
-    "index.html": "/annilaska/Dashboard.git/index.html",
-    "main.ea5d264c.css.map": "/annilaska/Dashboard.git/static/css/main.ea5d264c.css.map",
-    "main.4c03f082.js.map": "/annilaska/Dashboard.git/static/js/main.4c03f082.js.map"
+    "main.css": "/Dashboard/static/css/main.33371a89.css",
+    "main.js": "/Dashboard/static/js/main.6f870634.js",
+    "static/media/logoRos.svg": "/Dashboard/static/media/logoRos.71b18841752f78ef8dacb4b207b32e38.svg",
+    "index.html": "/Dashboard/index.html",
+    "main.33371a89.css.map": "/Dashboard/static/css/main.33371a89.css.map",
+    "main.6f870634.js.map": "/Dashboard/static/js/main.6f870634.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea5d264c.css",
-    "static/js/main.4c03f082.js"
+    "static/css/main.33371a89.css",
+    "static/js/main.6f870634.js"
   ]
 }
