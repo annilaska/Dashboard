@@ -48,7 +48,7 @@ const DashboardCircle = ({ xl }) => {
   return (
     <div className="dashBordContainer">
       {empty && <h4>В данном регионе отсутствуют гранты по всем направлениям</h4>}
-      {empty === false && <PieChart width={300} height={400}>
+      {empty === false && <PieChart width={300} height={310}>
           <Pie
             data={data01}
             dataKey="value"
@@ -68,7 +68,7 @@ const DashboardCircle = ({ xl }) => {
           label
         />
         <Tooltip />
-        <Legend content={<ContentLegend />} margin={{ top: '-20px', left: 20, right: 0, bottom: 0 }}/>
+        <Legend content={<ContentLegend />}/>
       </PieChart>}
       
     </div>
@@ -78,7 +78,7 @@ const DashboardCircle = ({ xl }) => {
 const ContentLegend = () => {
   return (
     <ul>
-      <li style={{ color: '#8884d8'}}><span>Кол-во грантов</span></li> {/* <div className="colorExample"/> */}
+      <li style={{ color: '#8884d8'}}><span>Кол-во грантов</span></li>
       <li style={{ color: '#82ca9d' }}><span>Бюджет грантов, руб</span></li>
     </ul>
   )

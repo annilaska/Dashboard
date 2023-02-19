@@ -30,8 +30,10 @@ const FirstCard = ({ uniqueNumbersSecondSection, indicators }) => {
 function CompactCard ({ valueForCircular, value, setExpanded }) {
     const str = " Количество детских и молодeжных общественных объединений, работающих по данному "
     const CircularValue = Object.values(value).map(el => el)
-   
+
     let textValue = Math.round(CircularValue[9]*100/valueForCircular[5])
+
+
 
     return (
         <motion.div className="compactCard"
