@@ -30,8 +30,10 @@ const FirstCard = ({ indicators }) => {
 function CompactCard ({ value, setExpanded }) {
     const str = " Количество детских и молодeжных общественных объединений, работающих по данному "
     const CircularValue = Object.values(value).map(el => el)
+
+    console.log(CircularValue);
     
-    console.log( CircularValue);
+    //console.log( CircularValue);
     return (
         <motion.div className="compactCard"
         onClick={setExpanded}
