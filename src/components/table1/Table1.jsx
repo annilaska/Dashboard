@@ -1,10 +1,10 @@
 import React  from 'react';
 import './Table1.css'
 import FirstCard from '../dashboards/secondSection/FirstCard';
-import ThirdCard from '../dashboards/secondSection/ThirdCard';
 
 
-export default function MyTable1({filteredCard, xl, handleIndicators, indicators, uniqueNumbers}) {
+
+export default function MyTable1({uniqueNumbersSecondSection, filteredCard, handleIndicators, indicators, uniqueNumbers}) {
 
 
     return (
@@ -20,8 +20,8 @@ export default function MyTable1({filteredCard, xl, handleIndicators, indicators
              {
                 indicators !== null 
                 ? <div className="tableContainer">
-                    <FirstCard indicators={indicators} />
-                    <ThirdCard indicators={indicators}  />
+                    <FirstCard uniqueNumbersSecondSection={uniqueNumbersSecondSection} indicators={indicators} />
+                    <FirstCard uniqueNumbersSecondSection={uniqueNumbersSecondSection} indicators={indicators} />
                 </div>
                 : null
             } 

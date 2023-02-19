@@ -32,7 +32,7 @@
 
 .CircularProgressbar-path {
     stroke: white!important;
-    stroke-width: 10px !important;
+    stroke-width: 7px !important;
     
 }
 
@@ -57,10 +57,10 @@
     align-items: flex-end;
 }
 
-// .detail>span:nth-child(2) {
-//     font-size: 22px;
-//     font-weight: bold;
-// }
+.detail>div:nth-child(2) {
+    font-size: 17px;
+    font-weight: bold;
+}
 
 .detail>span:nth-child(3) {
     font-size: 12px;
@@ -93,7 +93,6 @@
     color: white;
     font-size: 36px;
     font-weight: bold;
-    text-shadow: 0px 0px 15px white;
 }
 
 .ExpandedCard>span:nth-of-type(2) {

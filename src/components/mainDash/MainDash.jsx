@@ -60,6 +60,11 @@ const MainDash = () => {
   }) : null
 
 
+  let secondSection = xl !== null ? xl[1].map(el=> el) : null
+  const newSetSecondSection = new Set(secondSection)
+  const uniqueNumbersSecondSection = Array.from(newSetSecondSection)
+  
+
   const [indicators, setIndicators] = useState(null)  //показатели по выбранному региону
   const handleIndicators = (el) => {
       let content = el.target.getAttribute('value').toLowerCase()
@@ -78,7 +83,7 @@ const MainDash = () => {
         </div>
         <Routes>
           <Route path='/' element={<Table filteredCard={filteredCard} xl={xl} handleIndicators={handleIndicators} indicators={indicators} uniqueNumbers={uniqueNumbers} />} />
-          <Route path='/section1' element={<MyTable1 filteredCard={filteredCard} xl={xl} handleIndicators={handleIndicators} indicators={indicators} uniqueNumbers={uniqueNumbers} />} />
+          <Route path='/section1' element={<MyTable1 filteredCard={filteredCard} xl={xl} handleIndicators={handleIndicators} indicators={indicators} uniqueNumbers={uniqueNumbers} uniqueNumbersSecondSection = {uniqueNumbersSecondSection[13]}/>} />
           <Route path='/section2' element={<MyTable2 filteredCard={filteredCard} xl={xl} handleIndicators={handleIndicators} indicators={indicators} uniqueNumbers={uniqueNumbers} />} />
         </Routes>
         

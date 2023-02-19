@@ -7,18 +7,18 @@ import { UilTimes } from '@iconscout/react-unicons'
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-const FirstCard = ({ indicators }) => {
+const FirstCard = ({ uniqueNumbersSecondSection, indicators }) => {
   
+    const valueForCircular =Object.values(uniqueNumbersSecondSection).map(el => el)
     const value = indicators.find(el => el['№ строки'] === 12)
-
     const [expanded, setExpanded] = useState(false)
-
+   
     return (
       <AnimateSharedLayout>
           {
               expanded
               ? <ExpandedCard setExpanded={() => setExpanded(false)} />
-              : <CompactCard value={value} setExpanded={() => setExpanded(true)} />
+              : <CompactCard valueForCircular={valueForCircular} value={value} setExpanded={() => setExpanded(true)} />
           }
       </AnimateSharedLayout>
     )
@@ -27,11 +27,12 @@ const FirstCard = ({ indicators }) => {
 
 // CompactCard
 
-function CompactCard ({ value, setExpanded }) {
+function CompactCard ({ valueForCircular, value, setExpanded }) {
     const str = " Количество детских и молодeжных общественных объединений, работающих по данному "
     const CircularValue = Object.values(value).map(el => el)
-    
-    console.log( CircularValue);
+   
+    let textValue = Math.round(CircularValue[9]*100/valueForCircular[5])
+
     return (
         <motion.div className="compactCard"
         onClick={setExpanded}
@@ -39,20 +40,20 @@ function CompactCard ({ value, setExpanded }) {
         >
             <div className="radialBar">
                 <CircularProgressbar 
-                value={30}
-                text='30%'
+                value={textValue}
+                text={`${textValue}%`}
                 />
-                <span>по региону</span>
-                <span>всего</span>
+                <span>по региону {CircularValue[9]}</span>
+                <span>всего {valueForCircular[5]}</span>
             </div>
             <div className="detail">
                 <div className='budget'>
-                    <span>Бюджет СРФ</span>
-                    <span>Бюджет МО</span>
+                    <span>Бюджет СРФ {CircularValue[5]}</span>
+                    <span>Бюджет МО {CircularValue[6]}</span>
                 </div>
                 <div className="budget">
-                    <span>Кол-во грантов</span>
-                    <span>Бюджет грантов</span>
+                    <span>Кол-во грантов {CircularValue[7]}</span>
+                    <span>Бюджет грантов {CircularValue[8]}</span>
                 </div>
             </div>
         </motion.div>
