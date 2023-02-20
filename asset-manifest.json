@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.33371a89.css",
-    "main.js": "/Dashboard/static/js/main.6f870634.js",
+    "main.css": "/Dashboard/static/css/main.e188cfe1.css",
+    "main.js": "/Dashboard/static/js/main.c2951c7d.js",
     "static/media/logoRos.svg": "/Dashboard/static/media/logoRos.71b18841752f78ef8dacb4b207b32e38.svg",
     "index.html": "/Dashboard/index.html",
-    "main.33371a89.css.map": "/Dashboard/static/css/main.33371a89.css.map",
-    "main.6f870634.js.map": "/Dashboard/static/js/main.6f870634.js.map"
+    "main.e188cfe1.css.map": "/Dashboard/static/css/main.e188cfe1.css.map",
+    "main.c2951c7d.js.map": "/Dashboard/static/js/main.c2951c7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.33371a89.css",
-    "static/js/main.6f870634.js"
+    "static/css/main.e188cfe1.css",
+    "static/js/main.c2951c7d.js"
   ]
 }
